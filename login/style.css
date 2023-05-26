@@ -1,0 +1,303 @@
+/*
+    FONTES
+*/
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../Fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../Fonts/Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../Fonts/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Semibold;
+    src: url('../Fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+li, ul{
+    margin: 0;
+    list-style-type: none;
+}
+
+input, button{
+    outline: none !important;
+    border: none;
+}
+
+button :hover{
+    cursor: pointer;
+}
+
+/*
+    Utilitários
+*/
+
+body{
+    background-image: url(/assets/library1.png);
+    background-size: cover;
+}
+
+.text1{
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.text2{
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.margin-bottom-35 {
+    margin-bottom: 35px;
+}
+
+.margin-top-35 {
+    margin-top: 35px;
+}
+
+.margin-bottom-8 {
+    margin-bottom: 8px;
+}
+
+.margin-top-8 {
+    margin-top: 8px;
+}
+
+.margin-left-50{
+    margin-left: 50px;
+}
+
+/*
+    Card
+*/
+
+.card{
+    background-color: rgb(250, 235, 215, 0.8);
+    border-radius: 5px;
+    padding: 30px;
+    margin: 20px;
+    transition: all 0.3s ease-out; 
+}
+
+/*
+    Login
+*/
+
+.container{
+    width: 35%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.container-login{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+}
+
+.wrap-login{
+    width: 350px;
+    margin-right: 50px;
+}
+
+/*
+    Formulário
+*/
+
+.login-form{
+    width: 100%;
+}
+
+.login-form-title{
+    display: block;
+    font-family: Poppins-Bold;
+    font-size: 35px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/*
+    Input
+*/
+
+.wrap-input{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #337ab7
+}
+
+.input-form{
+    font-family: Poppins-SemiBold;
+    font-size: 18px;
+    color: rgb(51, 47, 46);
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 52px;
+    background: transparent;
+    padding: 0 5px;
+}
+
+.focus-input-form{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.focus-input-form::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background-color: #337ab7
+}
+
+.focus-input-form::after{
+    font-family: Poppins-Medium;
+    font-size: 18px;
+    color: rgb(66, 66, 71);
+    line-height: 1.2;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 5px;
+    transition: all 0.4s;
+}
+
+.input-form:focus + .focus-input-form::after{
+    top: -20px;
+    font-size: 15px;
+
+}
+
+.input-form:focus + .focus-input-form::before{
+   width: 100%;   
+}
+
+.has-val.input-form:focus + .focus-input-form::after{
+    top: -20px;
+    font-size: 15px;
+
+}
+
+.has-val.input-form:focus + .focus-input-form::before{
+   width: 100%;   
+}
+
+/*
+    Botão
+*/
+
+.container-login-form-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form-btn{
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: antiquewhite;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 120px;
+    height: 50px;
+    background-color: #337ab7;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+.login-form-btn:hover{
+    background-color: rgb(68, 54, 54);
+}
+
+/*
+    Link - Login Utils
+*/
+
+a{
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #337ab7;
+    margin: 0px;
+    transition: all 0.4s;
+}
+
+a:focus{
+    outline: none !important;
+}
+
+a:hover{
+    text-decoration: none;
+    color: rgb(68, 54, 54);
+}
+
+.login-utils{
+    margin-top: 20px;
+
+}
+
+.login-utils li{
+    position: relative;
+    padding-left: 16px;
+}
+
+.login-utils li::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #337ab7;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+/*
+    Media Query
+*/
+
+.has-val + .focus-input-form::after {
+    top: -20px;
+    font-size: 15px;
+}

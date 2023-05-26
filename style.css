@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@100&display=swap');
+
+.header{
+    background: #790085;
+}
+.logo {
+    width: 150px;
+}
+.body {
+    background-image: url(Images/background.jpg) ;
+    background-position: center;
+    
+}
+.nav_area a:hover {
+    background: #bb58c6;
+    border-radius: 5px;
+}
+
+#divMaisLidos{
+    margin-top: 30px;
+    margin-left: 100px;
+    background-color: #D9D9D9;
+    height: 550px;
+    width:300px;
+}
+
+
+#tituloMaisLidos{
+ text-align: center;
+ font-family: 'Imbue', serif;
+ margin-top: 15px;
+ margin-bottom: 30px;
+}
+#main{
+    display: flex;
+    background-color: #D1C6BB;
+}
+.container1{
+    width: 100%;
+    display: flex;
+    padding: 100px;
+}
+#capaLivro{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    height: 350px;
+    width: 250px;
+    text-align: center;
+}
+.col{
+    height: 200px;
+}
+#capaLivroMaisLidos{
+    height: 130px;
+    width: 81.25px;
+}
+
+.row-cols-2{
+    display: flex;
+    text-align: center;
+}
+.colMaisLidosDir{
+    height: 160px;
+    width: 82px!important;
+    margin-left: 30px;
+}
+.colMaisLidosEsq{
+    height: 160px;
+    width: 82px!important;
+    margin-left: 53px;
+}
+.book-list {
+    margin-top: 50px;
+    visibility: hidden;
+}
+#navbar{
+    height: 73px;
+}

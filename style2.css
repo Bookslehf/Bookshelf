@@ -1,0 +1,11 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.principal{
+    background-image: url(assets/BG.png);
+    background-size: cover;
+    height: 700px;
+    
+}

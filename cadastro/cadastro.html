@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro</title>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/comum/styleComum.css">
+   
+</head>
+
+<body>
+      <!-- início do preloader -->
+  <div id="preloader">
+    <div class="inner">
+       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+       <div class="bolas">
+          <div></div>
+          <div></div>
+          <div></div>                    
+       </div>
+    </div>
+</div>
+<!-- fim do preloader --> 
+    <div class="container">
+        <div class="card">
+            <div class="container-register">
+                <div class="wrap-register">
+                    <form class="register-form">
+                        <a href="/index.html"><img src="/assets/lofocor.png" style="width: 80px; margin-left: 135px;" alt=""></a>
+                        <span class="register-form-title">
+                            Crie um cadastro
+                        </span>
+
+                        <div class="wrap-input margin-bottom-35">
+                            <input id="usuario" class="input-form" type="usuario" name="name" autocomplete="off">
+                            <span class="focus-input-form" data-placeholder="Usuário"></span>
+                        </div>
+
+                        <div class="wrap-input margin-top-35 margin-bottom-35">
+                            <input  id="email" class="input-form" type="email" name="email" autocomplete="off">
+                            <span class="focus-input-form" data-placeholder="E-mail"></span>
+                        </div>
+
+                        <div class="wrap-input margin-bottom-35">
+                            <input  id="senha" class="input-form" type="senha" name="password">
+                            <span class="focus-input-form" data-placeholder="Senha"></span>
+                        </div>
+
+                        <div class="container-register-form-btn">
+                            <button onclick="cadastrar()" class="register-form-btn">Cadastrar</button>
+                        </div>
+
+                        <ul class="register-utils">
+                            <li class="margin-top-8 margin-bottom-8">
+                                <span class="text1">
+                                    Já possui um cadastro?
+                                </span>
+                                <a class="text2" href="/login/login.html">
+                                    Entrar
+                                </a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="/comum/comum.js"></script>
+ <script src="script.js"></script>
+</html>
