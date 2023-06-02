@@ -4,11 +4,7 @@
     font-family: 'Nunito', sans-serif;
     
 }
-#container1 {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-}
+
 
 .card {
     display: flex;
@@ -23,4 +19,9 @@
 
 .card-title {
     flex-grow: 1;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
