@@ -48,6 +48,9 @@ button :hover{
 /*
     Utilitários
 */
+* {
+    box-sizing: border-box;
+}
 
 body{
     background-image: url(/assets/library1.png);
@@ -86,6 +89,8 @@ body{
     margin-left: 50px;
 }
 
+
+
 /*
     Card
 */
@@ -102,10 +107,11 @@ body{
     Login
 */
 
+
 .container{
-    width: 35%;
+    width: 100%;
     margin: 0 auto;
-    padding: 50px;
+    padding: 20px;
 }
 
 .container-login{
@@ -118,8 +124,7 @@ body{
 }
 
 .wrap-login{
-    width: 350px;
-    margin-right: 50px;
+    width: 100%;
 }
 
 /*
@@ -297,7 +302,27 @@ a:hover{
     Media Query
 */
 
-.has-val + .focus-input-form::after {
-    top: -20px;
-    font-size: 15px;
+@media (min-width: 600px) {
+    .container {
+        width: 60%;
+        padding: 50px;
+    }
+
+    .wrap-login {
+        width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        width: 35%;
+    }
+}
+
+.logo-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
