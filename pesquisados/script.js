@@ -83,7 +83,7 @@ const mostraLivro = function(data){
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link navbar-links " href="../index2.html" style=" margin-right: 31px;">Home</a>
+                      <a class="nav-link navbar-links " href="../index.html" style=" margin-right: 31px;">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link navbar-links" href="../favoritos/index.html" style=" margin-right: 31px;">Favoritos</a>
@@ -120,7 +120,7 @@ const mostraLivro = function(data){
                     <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav" style="display: flex; align-items: center;">
                     <li class="nav-item">
-                      <a class="nav-link navbar-links" aria-current="page" href="../index2.html" style=" margin-right: 31px;">Home</a>
+                      <a class="nav-link navbar-links" aria-current="page" href="../index.html" style=" margin-right: 31px;">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link navbar-links" href="../favoritos/index.html" style=" margin-right: 31px;">Favoritos</a>
@@ -130,7 +130,7 @@ const mostraLivro = function(data){
                     </li>
       
                     <li class="nav-item" style="display: flex; align-items: center;">
-                    <a href="../perfil/PaginaPerfil.html" style="text-decoration: none"><i class="bi bi-person-circle"  style="font-size: 40px; margin-left: 456px;"></i></a>
+                    <a href="../perfil/PaginaPerfil.html" style="text-decoration: none"> <img src="${usuario.picture}" id="imgUser" style="border-radius: 30px;width:50px;margin-left: 450px; "></img></a>
                     <span id="loginUser" style="margin-left: 10px;"> ${usuario.usuario}</span>
                     </li>
                   </ul>

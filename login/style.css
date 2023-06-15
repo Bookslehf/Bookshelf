@@ -39,6 +39,7 @@ li, ul{
 input, button{
     outline: none !important;
     border: none;
+    margin-top: 20px;
 }
 
 button :hover{
@@ -48,9 +49,6 @@ button :hover{
 /*
     Utilitários
 */
-* {
-    box-sizing: border-box;
-}
 
 body{
     background-image: url(/assets/library1.png);
@@ -89,8 +87,6 @@ body{
     margin-left: 50px;
 }
 
-
-
 /*
     Card
 */
@@ -107,11 +103,10 @@ body{
     Login
 */
 
-
 .container{
-    width: 100%;
+    width: 35%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 50px;
 }
 
 .container-login{
@@ -124,7 +119,8 @@ body{
 }
 
 .wrap-login{
-    width: 100%;
+    width: 350px;
+    margin-right: 50px;
 }
 
 /*
@@ -150,7 +146,7 @@ body{
 .wrap-input{
     width: 100%;
     position: relative;
-    border-bottom: 2px solid #337ab7
+    border-bottom: 2px solid rgb(87, 87, 87);
 }
 
 .input-form{
@@ -184,13 +180,13 @@ body{
     width: 0;
     height: 2px;
     transition: all 0.4s;
-    background-color: #337ab7
+    background-color: rgb(118, 118, 118);
 }
 
 .focus-input-form::after{
     font-family: Poppins-Medium;
     font-size: 18px;
-    color: rgb(66, 66, 71);
+    color: rgb(16, 16, 16);
     line-height: 1.2;
     content: attr(data-placeholder);
     display: block;
@@ -244,13 +240,13 @@ body{
     padding: 0 20px;
     width: 120px;
     height: 50px;
-    background-color: #337ab7;
+    background-color: rgb(40, 40, 40);
     border-radius: 5px;
     transition: all 0.4s;
 }
 
 .login-form-btn:hover{
-    background-color: rgb(68, 54, 54);
+    background-color: rgb(78, 77, 77);
 }
 
 /*
@@ -292,7 +288,7 @@ a:hover{
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: #337ab7;
+    background-color: rgb(40, 40, 40);
     top: 45%;
     transform: translateY(-50%);
     left: 0;
@@ -302,27 +298,7 @@ a:hover{
     Media Query
 */
 
-@media (min-width: 600px) {
-    .container {
-        width: 60%;
-        padding: 50px;
-    }
-
-    .wrap-login {
-        width: 350px;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 900px) {
-    .container {
-        width: 35%;
-    }
-}
-
-.logo-title-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.has-val + .focus-input-form::after {
+    top: -20px;
+    font-size: 15px;
 }

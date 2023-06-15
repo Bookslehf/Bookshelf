@@ -6,25 +6,36 @@
     <title>Perfil</title>
 
     <link rel="stylesheet" href="PaginaPerfil.css">
+    <link rel="icon" href="/assets/lofocor.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="PaginaPerfil.js"></script>
 </head>
-<body  style="background-color:#E8F0F2">
-
+<body onload="carregaSite()"   style="background-color:#E8F0F2;">
+<script>
+  carregaSite = function(){
+    mostraInfoUsuario(),
+    initLogin(),
+    mostraLivrosLidos(),
+    mostraLivrosFavoritos()
+  }
+</script>
     <div id="navbarLoggedOut" ></div>
 
     <div id="navbarLoggedIn" ></div>
     <!-- Informações do usuario -->
 
     <div class="profile-info">
-      <i class="bi bi-person-circle" style="font-size: 80px;"></i>
-      <h3>UserName: Ricardo</h3>
-      <p>Livros lidos: 10</p>
-      <p>Resenhas: 5</p>
+      <img src="" id="imgUser" style="border-radius: 30px; margin-bottom: 21px;"></img>
+      <img src="" id="userOff" style="border-radius: 30px; margin-bottom: 21px; width: 80px;"></img>
+      <h3 id="nomeUser"></h3>
+      <p id="totalLivrosLidos"></p>
+      <p id="totalLivrosFavoritos"></p>
       <button id="logoutBtn" class="btn btn-danger" style="color: white; margin-top: 10px;" onclick="logout()">Deslogar</button>
     </div>
     
@@ -37,45 +48,7 @@
      
     <div id="container-fluid">
         <div class="otherRow" id="listaLivros">
-            <div id="container1" class="container1">
-              <div class="col-3" id="listaLivros" >
-                  <div id="books" class="card col-sm-12 "  >
-                    <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
-                    <div class="card-body">
-                            <h5 class="card-title">titulo</h5>
-                           
-                      </div>      
-                  </div>  
-              </div>
-              <div class="col-3" id="listaLivros" >
-                <div id="books" class="card col-sm-12 "  >
-                  <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
-                  <div class="card-body">
-                          <h5 class="card-title">titulo</h5>
-                         
-                    </div>      
-                </div>  
-                    </div>
-                    <div class="col-3" id="listaLivros" >
-                      <div id="books" class="card col-sm-12 "  >
-                        <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
-                        <div class="card-body">
-                                <h5 class="card-title">titulo</h5>
-                               
-                          </div>      
-                      </div>  
-                  </div>
-                  <div class="col-3" id="listaLivros" >
-                    <div id="books" class="card col-sm-12 "  >
-                      <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
-                      <div class="card-body">
-                              <h5 class="card-title">titulo</h5>
-                            
-                        </div>      
-                    </div>  
-                </div>
-        
-            </div>
+            <div id="livrosLidos" class="container1"></div>
         </div>
     </div>
 
@@ -89,45 +62,7 @@
       <!--LIVROS FAVORITOS-->
     <div id="container-fluid">
         <div class="otherRow" id="listaLivros">
-            <div id="container2" class="container1">
-              <div class="col-3" id="listaLivros" >
-                  <div id="books" class="card col-sm-12 "  >
-                    <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
-                    <div class="card-body">
-                            <h5 class="card-title">titulo</h5>
-                            
-                      </div>      
-                  </div>  
-              </div>
-              <div class="col-3" id="listaLivros" >
-                <div id="books" class="card col-sm-12 "  >
-                  <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
-                  <div class="card-body">
-                          <h5 class="card-title">titulo</h5>
-                         
-                    </div>      
-                </div>  
-                    </div>
-                    <div class="col-3" id="listaLivros" >
-                      <div id="books" class="card col-sm-12 "  >
-                        <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
-                        <div class="card-body">
-                                <h5 class="card-title">titulo</h5>
-                              
-                          </div>      
-                      </div>  
-                  </div>
-                  <div class="col-3" id="listaLivros" >
-                    <div id="books" class="card col-sm-12 "  >
-                      <a class="cardImg" href="/infoLivro/index.html?id=${livro.id}"> <img class="card-img-top" src="/assets/capaDoLivro.jpg" alt="Card image cap"></a>
-                      <div class="card-body">
-                              <h5 class="card-title">titulo</h5>
-                             
-                        </div>      
-                    </div>  
-                </div>
-        
-            </div>
+            <div id="livrosFavoritos" class="container1"></div>
         </div>
     </div>
 
@@ -145,9 +80,6 @@
   </div>
 </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="PaginaPerfil.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
+  
 </body>
 </html>

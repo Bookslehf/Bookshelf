@@ -10,7 +10,7 @@ cadastrar = function(){
     }
 
     
-    let token = valor_cookie("jwt");
+    
     let xhr = new XMLHttpRequest();
     let url = "http://localhost:8080/api/usuarios/save";
     xhr.onload = sucesso();
