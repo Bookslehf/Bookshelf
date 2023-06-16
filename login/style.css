@@ -302,3 +302,59 @@ a:hover{
     top: -20px;
     font-size: 15px;
 }
+/* Estilos existentes aqui */
+
+/* Media Queries */
+/* no seu arquivo CSS */
+
+/* estilos existentes aqui */
+
+.logo {
+    width: 80px;
+    display: block;
+    margin: auto;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    html, body {
+        overflow-x: hidden; /* Impede o scroll horizontal */
+    }
+
+    .container {
+        width: 100%; /* ajuste para se adequar à tela menor */
+        padding: 10px;
+    }
+
+    .wrap-login {
+        width: 100%;
+        margin-right: 0;
+        margin: auto; /* centraliza o wrap-login */
+    }
+
+    .login-form-title {
+        font-size: 24px;
+    }
+
+    .input-form {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    .login-form-btn {
+        width: 100%; /* botão de preenchimento completo na tela menor */
+    }
+
+    .card {
+        padding: 10px; /* reduzindo o padding */
+        margin: 0;  /* removendo a margem */
+        width: 100%; /* fazendo o cartão preencher a largura */
+        box-sizing: border-box; /* inclui padding e borda na largura e altura total */
+        height: auto; /* permite que o cartão expanda verticalmente conforme necessário */
+    }
+
+    .logo {
+        width: 80px; /* mantendo a largura do logo constante em telas menores */
+    }
+}
+

@@ -1,11 +1,60 @@
-
 *{
     padding: 0;
     margin: 0;
 }
+
 .principal{
     background-image: url(assets/BG.png);
     background-size: cover;
     height: 700px;
-    
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.overlay h3 {
+    font-size: 41px;
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.overlay h6 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.input-field {
+    flex-wrap: wrap;
+}
+
+#campoBuscar {
+    flex: 1 0 200px;
+    max-width: 529px;
+}
+
+#btnPesquisa {
+    width: 87px;
+    height: 40px;
+    background-color: #337ab7;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .overlay {
+        max-width: none;
+    }
+
+    #campoBuscar {
+        flex: 1 0 auto;
+    }
+
+    #btnPesquisa {
+        flex: 0 0 auto;
+        width: 87px;
+        margin-left: 15px;
+    }
 }
